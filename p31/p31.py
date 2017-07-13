@@ -28,6 +28,6 @@ for s in range(len(series)):
         polynomial = series[s]
     else:
         polynomial = convolve(polynomial,series[s])
-
+print polynomial[150:220]
 print polynomial[pence]
 print("--- %s seconds ---" % (time.time() - start))
