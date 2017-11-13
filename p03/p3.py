@@ -7,20 +7,11 @@ What is the largest prime factor of the number 600851475143 ?
 
 decomp = 600851475143
 
-with open('/home/noah/primes-to-100k.txt') as f:
-	primes = f.read().splitlines()
+i = 1
 
-i = 0
+while decomp > 1:
+    i+=2
+    if decomp % i == 0:
+        decomp/= i
 
-factors = []
-
-while decomp > 2:
-	prime = int(primes[i])
-	if decomp % prime == 0:
-		factors.append(prime)
-		decomp = decomp / prime
-		print(prime)
-		print(decomp)
-	i+=1
-
-print(factors)
+print(i)
